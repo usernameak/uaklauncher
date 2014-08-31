@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="add_shortcut">Shortcut</string>
+	<string name="title_set_wallpaper">Set wallpaper</string>
+   	<string name="menu_wallpaper">Wallpaper</string>
+	<string name="menu_add">Add</string>
+    <string name="app_name">UAK Launcher</string>
+
+</resources>

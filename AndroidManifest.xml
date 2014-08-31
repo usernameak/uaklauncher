@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uak.launcher"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk 
+        android:minSdkVersion="11" 
+        android:targetSdkVersion="10" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+		<activity
+			android:label="Add shortcut"
+			android:name=".AddShortcutActivity"
+			android:theme="@android:style/Theme.Holo.Dialog"/>
+		<activity
+            android:label="@string/app_name"
+            android:name=".AddActivity"
+			android:theme="@android:style/Theme.Holo.Wallpaper"/>
+		<activity
+            android:label="@string/app_name"
+            android:name=".WidgetTestActivity"
+			android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+		<activity
+            android:label="@string/title_set_wallpaper"
+            android:name=".SetWallpaperActivity"
+			android:theme="@android:style/Theme.Holo.Wallpaper"
+			android:icon="@drawable/ic_launcher_wallpaper">
+            <intent-filter >
+                <action android:name="uak.launcher.intent.action.SET_WALLPAPER" />
+
+                <category android:name="uak.launcher.intent.category.COMMON" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".AppsMenuActivity"
+			android:theme="@android:style/Theme.Holo.Wallpaper">
+            <intent-filter >
+                <action android:name="uak.launcher.intent.action.APPS_MENU" />
+
+                <category android:name="uak.launcher.intent.category.COMMON" />
+            </intent-filter>
+        </activity>
+		<activity
+            android:label="@string/app_name"
+            android:name=".HomeActivity"
+			android:theme="@android:style/Theme.Holo.Wallpaper">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<receiver android:name=".ShortcutCreatedReceiver">
+			<intent-filter>
+				<action android:name="uak.launcher.action.CREATE_SHORTCUT"/>
+			</intent-filter>
+		</receiver>
+    </application>
+
+</manifest>

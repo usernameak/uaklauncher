@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:id="@+id/homeLayout">
+
+	<GridLayout
+		android:layout_height="match_parent"
+		android:layout_width="match_parent"
+		android:rowCount="5"
+		android:columnCount="6"
+		android:orientation="horizontal">
+
+		<Button
+			android:text=""
+			android:layout_height="80dp"
+			android:layout_width="80dp"/>
+
+		<Space
+			android:layout_gravity="fill"
+			android:layout_width="80dp"
+			android:layout_height="80dp"/>
+
+		<Button
+			android:text=""
+			android:layout_height="80dp"
+			android:layout_width="80dp"/>
+
+	</GridLayout>
+
+</RelativeLayout>
+
